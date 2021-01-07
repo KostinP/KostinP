@@ -1,0 +1,13 @@
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Введение}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Мотивация}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Постановка задачи}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Доступные программные средства}{1}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Полученные результаты}{1}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Основная часть раз}{1}{section.2}%
+\contentsline {section}{\numberline {3}Основная часть два: Теория}{1}{section.3}%
+\contentsline {section}{\numberline {4}Основная часть два: Детали реализации}{1}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Расчётная часть}{1}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Анализ экспериментов.}{1}{section.5}%
+\contentsline {section}{\numberline {6}Заключение}{2}{section.6}%
