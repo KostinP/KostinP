@@ -1,0 +1,188 @@
+% --------------------- Шаблон для заметок по математике --------------------------
+% Автор: Костин Павел, KoPavAlex@yandex.ru
+% Если заметили ошибку, напишите на email
+% Если хотите добавить изменение самостоятельно, GitHub: . PR-s welcome!
+% Использованы шаблоны из этого репозитория и свободные материалы из Интернета
+% -----------------------------------------------------------------------
+
+% Глобальные поля
+\usepackage[left=30mm, top=20mm, right=15mm, bottom=20mm,nohead, includefoot,footskip=35pt]{geometry}
+
+% Язык, кодировка, шрифт
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+%\renewcommand{\rmdefault}{Tempora-TLF}
+
+% Межстрочный интервал = 1.5pt
+%\usepackage{setspace}
+%\onehalfspacing
+
+% Абзацный отступ = 1.25см
+\usepackage{indentfirst}
+\setlength\parindent{12.5mm}
+
+% Пакет для цветного текста
+\usepackage[dvipsnames]{xcolor}
+
+% Пакет для содержания
+\usepackage{tocloft}
+
+% Команда для специальных разделов (введение, обзор литературы, etc)
+% Не нумеруются в содержании, по уровню вложенности:
+\newcommand{\specialsection}[1]{
+    \phantomsection
+    \bigskip\smallskip\hspace{-13.8mm}
+    \normalfont\fontsize{18}{18}\textbf{#1}
+    \par\bigskip\normalfont\normalsize
+    \addcontentsline{toc}{section}{#1}
+}
+
+% Размеры заголовков разделов и подразделов
+\usepackage{titlesec}
+% Раздел: 18pt, добавляем слово "Глава"
+\titleformat{\section}
+{\fontsize{18}{18}\bfseries}{\hspace{-1.5mm}Глава \thesection. \hskip-1em}{1em}{}
+% Подраздел: 16pt
+\titleformat{\subsection}
+{\fontsize{16}{16}\bfseries}{\hspace{-0.2mm}\thesubsection}{1em}{}
+
+% Сожержание
+% Выравнивание заголовка по центру (да, да, хак с отступом слева \hspace{0.31\textwidth})
+% т.к. окружение center и \centering не работают
+\renewcommand{\cfttoctitlefont}{\hspace{0.31\textwidth} \bfseries\Large}
+\renewcommand{\cftbeforetoctitleskip}{-1em}
+% Слово "Глава" в содержании
+\renewcommand{\cftsecpresnum}{Глава\space}
+\newlength\mylength
+\settowidth\mylength{\cftsecpresnum\space}
+\addtolength\cftsecnumwidth{\mylength}
+% Строки с точками
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% Точки после цифр в в содержании
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+% Подровнять subsection под точку главы
+% (если глав будет больше десяти, будет чуть хуже)
+\setlength{\cftsubsecindent}{2.68em}
+% Интервал глав
+\setlength{\cftbeforesecskip}{4pt}
+
+\renewcommand{\cftsecpagefont}{\normalfont}
+
+% Шрифт подписи (caption) = 12pt
+% (Повезло, что small как раз равен 12pt)
+\usepackage[font=small,labelfont=bf]{caption}
+
+% Пакет, который позволяет собирать один документ TeX из нескольких
+\usepackage{import}
+
+% Пакет, реализующий гиперссылки
+\usepackage[colorlinks=true,unicode=true]{hyperref}
+
+\hypersetup{
+  colorlinks,
+  linkcolor=red,
+  linktoc=all
+}
+
+%\newcommand{\ITEM}{\vspace{-0.2cm}\item}
+%\newcommand{\MList}[1]{\par\begin{itemize}#1\end{itemize}}
+%\newcommand{\NList}[1]{\par\begin{enumerate}#1\end{enumerate}}
+
+% Нумерация только тех формул, на которые в тексте присутствует ссылка
+\usepackage{autonum}
+
+% Список литературы
+\renewenvironment{thebibliography}[1]
+    {\bigskip
+    {\centering\large\bf Список литературы\par}%
+    \addcontentsline{toc}{section}{Список литературы}
+    \smallskip
+    \list{\@biblabel{\@arabic\c@enumiv}}%
+        {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+    \sloppy
+    \clubpenalty4000
+    \@clubpenalty \clubpenalty
+    \widowpenalty4000%
+    \sfcode`\.\@m}
+    {\def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+    \endlist}
+
+% Хитрые мат. символы
+\usepackage{euscript}
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+% Картинки (можно встявлять даже pdf)
+\usepackage[pdftex]{graphicx}
+
+% AMS-LaTeX — набор макросширений для LaTeX, разработанный Американским математическим обществом
+%Набор предоставляет дополнительные математические символы, множество удобных возможностей для оформления математических формул (например, упрощённую работу с многострочными формулами) и используется почти во всех LaTeX-документах, в которых есть сколько-нибудь сложные формулы.
+
+% Основные пакеты из набора:
+
+% Классы документов amsart, amsbook, amsproc, позволяющие оформить документ в соответствии с принятыми в Американском математическом сообществе рекомендациями.
+% Стилевой пакет amscd (поддержка коммутативных диаграмм).
+% Стилевой пакет amsfonts (поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} }\mathbb {R} ).
+% Стилевой пакет amsmath (удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.).
+% Стилевой пакет amssymb (amsfonts + несколько сотен дополнительных математических символов).
+% Стилевой пакет amsthm (окружения «теорема», «лемма» и т. п.).
+\usepackage{amsthm, amssymb, amsmath}
+
+% plain boldface title, italicized body. Commonly used in theorems, lemmas, corollaries, propositions and conjectures.
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{corollary}{Следствие}[section]
+\newtheorem{proposition}{Предложение}[section]
+\newtheorem{axiom}{Аксиома}[section]
+\newtheorem{conjecture}{Гипотеза}[section]
+\newtheorem{algorithm}{Алгоритм}[section]
+
+% definition boldface title, romand body. Commonly used in definitions, conditions, problems and examples.
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+\newtheorem{condition}{Условие}[section]
+\newtheorem{problem}{Проблема}[section]
+\newtheorem{example}{Пример}[section]
+
+% remark italicized title, romman body. Commonly used in remarks, notes, annotations, claims, cases, acknowledgments and conclusions.
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}[section]
+
+%более сложные вещи
+\renewcommand{\dddot}[1]{\os{{}_{\displaystyle ...}}{#1}} %обычный \dddot делает некрасиво (поднимает символ и ставит слишком высоко точки)
+\newcommand{\devides}{\mathop{\raisebox{-1pt}{\vdots}}} %значок деления
+\def \doted#1{\stackrel{\circ}{#1}}
+\newcommand\setItemnumber[1]{\setcounter{enumi}{\numexpr#1-1\relax}}
+%значок пусть
+\def\letus{%
+    \mathord{\setbox0=\hbox{$\exists$}%
+             \hbox{\kern 0.125\wd0%
+                   \vbox to \ht0{%
+                      \hrule width 0.75\wd0%
+                      \vfill%
+                      \hrule width 0.75\wd0}%
+                   \vrule height \ht0%
+                   \kern 0.125\wd0}%
+           }%
+}
+
+%римские цифры
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+% tikz
+\usepackage{tikz}
+\usetikzlibrary{shadings}
+%\usepackage{pgfplots}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm, compat=1.10}
+
+\usepackage{subfiles} % Best loaded last in the preamble
