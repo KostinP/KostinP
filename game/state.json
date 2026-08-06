@@ -25,7 +25,7 @@
       null,
       null,
       null,
-      null,
+      "W",
       null,
       null,
       null
@@ -35,7 +35,7 @@
       null,
       "B",
       "B",
-      "B",
+      "W",
       null,
       null,
       null
@@ -81,7 +81,7 @@
       null
     ]
   ],
-  "turn": "W",
+  "turn": "B",
   "status": "in_progress",
   "game_number": 1,
   "history": [
@@ -90,9 +90,15 @@
       "cell": "C4",
       "color": "B",
       "user": "KostinP"
+    },
+    {
+      "date": "2026-08-06T13:20:55+00:00",
+      "cell": "E3",
+      "color": "W",
+      "user": "KostinP"
     }
   ],
   "leaderboard": {
-    "KostinP": 1
+    "KostinP": 2
   }
 }
