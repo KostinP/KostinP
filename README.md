@@ -134,7 +134,7 @@
 </table>
 
 <details>
-  <summary><h2>🛠️ My Favorite Tools</h2></summary>
+  <summary><h2>🛠️ Мои любимые инструменты</h2></summary>
 
   <h3>👨‍💻 Языки и фреймворки</h3>
   <p>
