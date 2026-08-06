@@ -177,7 +177,13 @@ def render_moves(state) -> str:
     lines = ["| Дата (UTC) | Ход | Игрок |", "|---|---|---|"]
     for m in history:
         dt = datetime.fromisoformat(m["date"]).strftime("%d.%m.%y %H:%M")
-        lines.append(f"| {dt} | {PIECE[m['color']]} {m['cell']} | @{m['user']} |")
+        if m.get("event") == "game_end":
+            b, w = m["score"]
+            winner = m.get("winner")
+            winner_label = f"{PIECE[winner]} победа" if winner else "🤝 ничья"
+            lines.append(f"| {dt} | 🏁 Игра #{m['game_number']} — {b}:{w} | {winner_label} |")
+        else:
+            lines.append(f"| {dt} | {PIECE[m['color']]} {m['cell']} | @{m['user']} |")
     return "\n".join(lines)
 
 
@@ -283,28 +289,48 @@ def cmd_apply(_args):
 
     nxt = opponent(turn)
     skip_note = ""
+    game_over = False
     if legal_moves(board, nxt):
         state["turn"] = nxt
     elif legal_moves(board, turn):
         state["turn"] = turn
         skip_note = f" У {NAME[nxt]} нет ходов, ход передаётся обратно."
     else:
-        state["status"] = "finished"
+        game_over = True
 
+    b, w = score(board)
+    finished_game_number = state["game_number"]
+    end_note = ""
+
+    if game_over:
+        winner = "B" if b > w else "W" if w > b else None
+        state["history"].append(
+            {
+                "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                "event": "game_end",
+                "game_number": finished_game_number,
+                "score": [b, w],
+                "winner": winner,
+            }
+        )
+        winner_label = f"{PIECE[winner]} {NAME[winner]}" if winner else "ничья"
+        end_note = (
+            f" Это был последний ход игры #{finished_game_number} — финальный счёт "
+            f"{PIECE['B']} {b} : {w} {PIECE['W']}, победили {winner_label}. "
+            f"Начинается игра #{finished_game_number + 1}!"
+        )
+        state["board"] = initial_board()
+        state["turn"] = "B"
+        state["game_number"] = finished_game_number + 1
+
+    state["status"] = "in_progress"
     save_state(state)
     rewrite_readme(state)
 
-    b, w = score(board)
-    if state["status"] == "finished":
-        result = (
-            f"Готово! Игра #{state['game_number']} завершена со счётом "
-            f"{PIECE['B']} {b} : {w} {PIECE['W']}. Смотрите README."
-        )
-    else:
-        result = (
-            f"Ход `{cell}` принят за {PIECE[turn]} {NAME[turn]} (@{user}). "
-            f"Счёт: {PIECE['B']} {b} : {w} {PIECE['W']}.{skip_note}"
-        )
+    result = (
+        f"Ход `{cell}` принят за {PIECE[turn]} {NAME[turn]} (@{user}). "
+        f"Счёт: {PIECE['B']} {b} : {w} {PIECE['W']}.{skip_note}{end_note}"
+    )
     set_output("valid", "true")
     set_output("message", result)
     set_output("commit_message", f"Reversi: {cell} by @{user}")
