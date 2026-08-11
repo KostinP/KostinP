@@ -14,7 +14,12 @@ concurrency:
 
 jobs:
   play:
-    if: contains(github.event.issue.labels.*.name, 'reversi-move')
+    # Filtering on the "reversi-move" label would be nicer, but GitHub silently
+    # drops the `labels=` query param on the "new issue" link for anyone without
+    # triage/write access to the repo (i.e. every outside player) — so the label
+    # never actually lands on the issue. Match on the title instead, which the
+    # link always sets correctly regardless of who clicked it.
+    if: contains(github.event.issue.title, 'Move:')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -59,6 +64,19 @@ jobs:
               issue_number: context.issue.number,
               body: message,
             });
+            // Best-effort labeling for browsing/organization only — never blocks
+            // processing, since the label may not exist or the bot could lack
+            // permission in some edge case.
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ["reversi-move"],
+              });
+            } catch (err) {
+              core.warning(`Could not add reversi-move label: ${err.message}`);
+            }
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
