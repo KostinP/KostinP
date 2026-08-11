@@ -193,16 +193,16 @@
 ## 🎮 Реверси вживую — сыграйте ход
 
 <!-- REVERSI:BOARD:START -->
-**Ходят ⚪ белые.** Счёт: ⚫ 5 : 2 ⚪. Нажмите на зелёную клетку, чтобы сходить.
+**Ходят ⚫ чёрные.** Счёт: ⚫ 4 : 4 ⚪. Нажмите на зелёную клетку, чтобы сходить.
 
 |   | A | B | C | D | E | F | G | H |
 |---|---|---|---|---|---|---|---|---|
 | **1** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
-| **2** | ▫️ | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+E2&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ▫️ | ▫️ |
-| **3** | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ⚫ | ▫️ | ▫️ | ▫️ |
-| **4** | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+B4&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚫ | ⚪ | ▫️ | ▫️ | ▫️ |
-| **5** | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚪ | ▫️ | ▫️ | ▫️ |
-| **6** | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C6&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
+| **2** | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+D2&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚪ | ⚫ | ▫️ | ▫️ |
+| **3** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
+| **4** | ▫️ | ▫️ | ⚫ | ⚫ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F4&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
+| **5** | ▫️ | ▫️ | ▫️ | ⚫ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
+| **6** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F6&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
 | **7** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
 | **8** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
 <!-- REVERSI:BOARD:END -->
@@ -248,6 +248,7 @@
 <!-- REVERSI:MOVES:START -->
 | Дата (UTC) | Ход | Игрок |
 |---|---|---|
+| 11.08.26 15:37 | ⚪ E2 | @KostinP |
 | 11.08.26 15:33 | ⚫ F2 | @vologin-dmitry |
 | 06.08.26 13:20 | ⚪ E3 | @KostinP |
 | 06.08.26 13:05 | ⚫ C4 | @KostinP |
@@ -263,7 +264,7 @@
 <!-- REVERSI:LEADERBOARD:START -->
 | # | Игрок | Ходов |
 |---|---|---|
-| 1 | @KostinP | 2 |
+| 1 | @KostinP | 3 |
 | 2 | @vologin-dmitry | 1 |
 <!-- REVERSI:LEADERBOARD:END -->
 
