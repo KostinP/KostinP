@@ -1,0 +1,40 @@
+name: Update streak badge
+
+on:
+  schedule:
+    # 03:00 UTC daily — well after most timezones have finished "today"
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate streak.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_LOGIN: KostinP
+        run: python3 scripts/streak.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "streak-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- assets/streak.svg; then
+            echo "No change, skipping commit."
+            exit 0
+          fi
+          git add assets/streak.svg
+          git commit -m "Update streak badge"
+          git push
