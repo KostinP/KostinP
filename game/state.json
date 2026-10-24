@@ -35,8 +35,8 @@
       null,
       "B",
       "B",
-      "W",
-      null,
+      "B",
+      "B",
       null,
       null
     ],
@@ -81,7 +81,7 @@
       null
     ]
   ],
-  "turn": "B",
+  "turn": "W",
   "status": "in_progress",
   "game_number": 1,
   "history": [
@@ -120,10 +120,17 @@
       "cell": "G1",
       "color": "W",
       "user": "KostinP"
+    },
+    {
+      "date": "2026-10-24T13:40:18+00:00",
+      "cell": "F4",
+      "color": "B",
+      "user": "3384-Traxel-Vitaliy"
     }
   ],
   "leaderboard": {
     "KostinP": 4,
-    "vologin-dmitry": 2
+    "vologin-dmitry": 2,
+    "3384-Traxel-Vitaliy": 1
   }
 }
