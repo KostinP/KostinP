@@ -149,17 +149,17 @@
 ## 🎮 Реверси вживую — сыграйте ход
 
 <!-- REVERSI:BOARD:START -->
-**Ходят ⚫ чёрные.** Счёт: ⚫ 6 : 10 ⚪. Нажмите на зелёную клетку, чтобы сходить.
+**Ходят ⚪ белые.** Счёт: ⚫ 8 : 9 ⚪. Нажмите на зелёную клетку, чтобы сходить.
 
 |   | A | B | C | D | E | F | G | H |
 |---|---|---|---|---|---|---|---|---|
-| **1** | ▫️ | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+E1&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F1&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚪ | ▫️ |
-| **2** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G2&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **3** | ▫️ | ▫️ | ▫️ | ⚫ | ⚫ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+H3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) |
-| **4** | ▫️ | ▫️ | ⚫ | ⚫ | ⚫ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G4&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **5** | ▫️ | ▫️ | ▫️ | ⚫ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **6** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G6&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **7** | ▫️ | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+E7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
+| **1** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ▫️ |
+| **2** | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C2&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ⚪ | ⚪ | ▫️ | ▫️ |
+| **3** | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+B3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚫ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+H3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) |
+| **4** | ▫️ | ▫️ | ⚫ | ⚫ | ⚫ | ⚫ | ⚫ | ▫️ |
+| **5** | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+B5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚪ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+H5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) |
+| **6** | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C6&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ⚪ | ⚪ | ▫️ | ▫️ |
+| **7** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
 | **8** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
 <!-- REVERSI:BOARD:END -->
 
@@ -204,11 +204,11 @@
 <!-- REVERSI:MOVES:START -->
 | Дата (UTC) | Ход | Игрок |
 |---|---|---|
+| 24.10.26 13:43 | ⚫ G4 | @3384-Traxel-Vitaliy |
 | 24.10.26 13:42 | ⚪ F6 | @KostinP |
 | 24.10.26 13:42 | ⚫ F3 | @3384-Traxel-Vitaliy |
 | 24.10.26 13:41 | ⚪ G3 | @KostinP |
 | 24.10.26 13:41 | ⚫ D3 | @3384-Traxel-Vitaliy |
-| 24.10.26 13:41 | ⚪ E6 | @KostinP |
 <!-- REVERSI:MOVES:END -->
 
 </details>
@@ -222,7 +222,7 @@
 | # | Игрок | Ходов |
 |---|---|---|
 | 1 | @KostinP | 7 |
-| 2 | @3384-Traxel-Vitaliy | 3 |
+| 2 | @3384-Traxel-Vitaliy | 4 |
 | 3 | @vologin-dmitry | 2 |
 <!-- REVERSI:LEADERBOARD:END -->
 
