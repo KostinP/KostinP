@@ -149,17 +149,17 @@
 ## 🎮 Реверси вживую — сыграйте ход
 
 <!-- REVERSI:BOARD:START -->
-**Ходят ⚪ белые.** Счёт: ⚫ 7 : 6 ⚪. Нажмите на зелёную клетку, чтобы сходить.
+**Ходят ⚫ чёрные.** Счёт: ⚫ 6 : 8 ⚪. Нажмите на зелёную клетку, чтобы сходить.
 
 |   | A | B | C | D | E | F | G | H |
 |---|---|---|---|---|---|---|---|---|
-| **1** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ▫️ |
+| **1** | ▫️ | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+E1&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F1&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚪ | ▫️ |
 | **2** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ⚪ | ▫️ | ▫️ |
-| **3** | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+B3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚪ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **4** | ▫️ | ▫️ | ⚫ | ⚫ | ⚫ | ⚫ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G4&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **5** | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+B5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+C5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚫ | ⚪ | ⚫ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G5&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
-| **6** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | ▫️ | ▫️ | ▫️ |
-| **7** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
+| **3** | ▫️ | ▫️ | ▫️ | ⚫ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F3&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ⚪ | ▫️ |
+| **4** | ▫️ | ▫️ | ⚫ | ⚫ | ⚫ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+G4&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ |
+| **5** | ▫️ | ▫️ | ▫️ | ⚫ | ⚪ | ⚫ | ▫️ | ▫️ |
+| **6** | ▫️ | ▫️ | ▫️ | ▫️ | ⚪ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F6&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
+| **7** | ▫️ | ▫️ | ▫️ | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+D7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+E7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | [🟩](https://github.com/KostinP/KostinP/issues/new?title=Move%3A+F7&labels=reversi-move&body=Automatically+opened+from+the+README+board.+Please+do+not+edit+the+title.) | ▫️ | ▫️ |
 | **8** | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ | ▫️ |
 <!-- REVERSI:BOARD:END -->
 
@@ -204,11 +204,11 @@
 <!-- REVERSI:MOVES:START -->
 | Дата (UTC) | Ход | Игрок |
 |---|---|---|
+| 24.10.26 13:41 | ⚪ G3 | @KostinP |
 | 24.10.26 13:41 | ⚫ D3 | @3384-Traxel-Vitaliy |
 | 24.10.26 13:41 | ⚪ E6 | @KostinP |
 | 24.10.26 13:40 | ⚫ F4 | @3384-Traxel-Vitaliy |
 | 27.08.26 20:15 | ⚪ G1 | @KostinP |
-| 27.08.26 20:10 | ⚫ F5 | @vologin-dmitry |
 <!-- REVERSI:MOVES:END -->
 
 </details>
@@ -221,7 +221,7 @@
 <!-- REVERSI:LEADERBOARD:START -->
 | # | Игрок | Ходов |
 |---|---|---|
-| 1 | @KostinP | 5 |
+| 1 | @KostinP | 6 |
 | 2 | @vologin-dmitry | 2 |
 | 3 | @3384-Traxel-Vitaliy | 2 |
 <!-- REVERSI:LEADERBOARD:END -->
